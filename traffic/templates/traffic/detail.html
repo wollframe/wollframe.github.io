@@ -1,0 +1,16 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="display-4">Вартість поїздки становитиме: {{ result }}грн</h2>
+        <p class="lead">У варстість поїздки входить: відстань (16грн за 1 км) і доставка (150 грн)</p>
+        <hr class="my-4">
+        <p>Також є послуга порфесійних вантажників. Їх вартість становитеме від 150 грн за 1 годину.</p>
+        <a href="{% url 'price' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Назад</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'add' %}" role="button">Зробити замовлення</a>
+    </div>
+</div>
+
+{% endblock %}

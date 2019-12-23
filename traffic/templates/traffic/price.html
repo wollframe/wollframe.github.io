@@ -1,0 +1,56 @@
+{% extends "layout/basic.html" %}
+{% load staticfiles %}
+{% load bootstrap %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+
+ 
+    <div class="jumbotron">
+        <h1 class="display-4">Ціна вартості поїздки:</h1>
+        <p class="lead">У варстість поїздки входить: відстань (16грн за 1 км) і доставка (150 грн)</p>
+
+        <p>Також є послуга порфесійних вантажників. Їх вартість становитеме від 150 грн за 1 годину.</p>
+        
+        <a class="btn btn-primary btn-lg" href="{% url 'add' %}" role="button">Зробити замовлення</a>
+
+
+
+
+        <hr class="my-4">
+          <div class="card-header">
+              Розрахунок вартості перевезення
+          </div>
+          <div class="card-body">
+              
+              <form role="form" method="post">
+                  <legend>Введіть у форму відстань в кілометрах</legend>
+                  {% csrf_token %}
+                  {{ form|bootstrap }}
+                  <div class="form-group">
+                  <input type="submit" value="Розрахувати" class="btn btn-primary">
+                  </div>
+                  {% if result %} 
+              <a href="{% url 'detail' %}" class="btn btn-primary">Розрахувати</a>
+              
+              {% endif %}
+          </form>
+          </div>
+          
+      
+
+    </div>
+  
+
+
+
+    
+</div>
+
+
+
+{% endblock %}

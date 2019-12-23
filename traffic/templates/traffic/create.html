@@ -1,0 +1,22 @@
+{% extends "layout/basic.html" %}
+{% load bootstrap %}
+
+{% block title %}Добавление объявления{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<form role="form" method="post">
+    <legend>Заповніть форми</legend>
+    <div class="card-footer text-muted">
+           Якщо ви бажаєте, щоб ми вам зателефонували введіть тільки номер та ім'я.
+    </div>
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <div class="form-group">
+      <input type="submit" value="Добавити" class="btn btn-primary">
+    </div>
+</form>
+</div>
+
+{% endblock %}

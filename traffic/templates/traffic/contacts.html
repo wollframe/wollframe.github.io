@@ -1,0 +1,18 @@
+{% extends "layout/basic.html" %}
+{% load staticfiles %}
+{% load bootstrap %}
+
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Наші контакти:</h1>
+        <p class="lead">Чернівецька область, м. Чернівці </p>
+        <p class="lead"><a href="tel:+380506888273">+38 050 6888 273</a></p>
+        <hr class="my-4">
+        <p>Соціальні мережі:</p>
+        <p class="card-text"><a href="https://www.instagram.com/perevozki_cv_ua/?igshid=1kcrhcrj8ps0t" target="_blank"><img src="{% static 'traffic/img/logo/in.png' %}" width="30" height="30" alt=""></a></p>
+        <a class="btn btn-primary btn-lg" href="{% url 'add' %}" role="button">Замовити дзвінок</a>
+    </div>
+</div>
+{% endblock %}

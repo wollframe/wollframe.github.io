@@ -1,0 +1,45 @@
+{% extends "layout/basic.html" %}
+{% load staticfiles %}
+
+
+
+{% block header %}
+<div class="subheader">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-md-4 offset-md-1 >
+                  <a href="#" class="subheader_logo"><img src="{% static 'traffic/img/logo/lg.png' %}" alt="logo"  ></a>
+              </div>
+
+              <div class="xs-hidden col-md-3 offset-md-1 col-xl-3 offset-xl-1">
+                  <div class="subeheader_call">м. Чернівці</div>
+                  <a href="tel:+380506888273" class="subheader_phone">+38 050 6888 273</a>
+              </div>
+
+              <div class="col-6 col-md-3">
+                  <a href="tel:+380506888273" class="xs subheader_phone">+38 050 6888 273</a>
+                  <a href="{% url 'add' %}"><button class="subeheader_btn">Замовити дзвінок</button></a>
+              </div>
+
+            </div>
+          </div>
+{% endblock %}
+
+{% block promo %}
+    <section class="promo">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                  <h1 class="promo_header">ВАНТАЖНІ ПЕРЕВЕЗЕННЯ!</h1>
+                  <h2 class="promo_subeheader">ПО МІСТУ, ОБЛАСТІ ТА УКРАЇНІ!</h2>
+                  <div class="promo_text">Вантажні перевезення до 3-х тон 4.2x2.2x2.3.Помірні ціни.Можливі послуги професійних вантажників.</div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
